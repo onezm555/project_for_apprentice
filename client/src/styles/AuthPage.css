@@ -1,0 +1,79 @@
+/* จัดให้กล่อง login อยู่ตรงกลางทั้งแนวตั้งและแนวนอน */
+.auth-wrapper {
+  display: flex;
+  justify-content: center; /* กลางแนวนอน */
+  align-items: center;     /* กลางแนวตั้ง */
+  height: 100vh;
+  width: 100%;
+  background: var(--color-bg, #f9fafb);
+  position: relative;
+  z-index: 10; /* กันไม่ให้โดนหน้าอื่นทับ */
+}
+
+/* กล่อง login */
+.auth-box {
+  background: var(--color-card, #ffffff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 380px;
+  padding: 100px 72px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* ฟอร์มด้านใน */
+.auth-box form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ช่องกรอกและปุ่ม */
+.auth-box input,
+.auth-box button {
+  width: 100%;
+  max-width: 280px;
+}
+
+/* 🎨 ช่องกรอกข้อความ */
+.auth-box input {
+  background-color: var(--color-card); /* ใช้สีพื้นหลังตามธีม */
+  color: var(--color-text);            /* สีตัวอักษร */
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* ขณะโฟกัส */
+.auth-box input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+  background-color: var(--color-card);
+  color: var(--color-text);
+}
+
+/* ปุ่ม */
+.auth-box button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.auth-box button:hover {
+  background-color: var(--color-primary-hover);
+}

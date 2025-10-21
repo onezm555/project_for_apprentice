@@ -1,0 +1,103 @@
+/* sweetalert.css */
+
+/* เปลี่ยนพื้นหลัง popup */
+.swal2-popup {
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* เปลี่ยนปุ่มยืนยัน */
+.swal2-confirm {
+  background-color: var(--color-primary, #3b82f6) !important;
+  border-radius: 8px !important;
+  padding: 8px 24px !important;
+}
+
+/* ปุ่มยกเลิก */
+.swal2-cancel {
+  background-color: #e5e7eb !important;
+  color: #374151 !important;
+}
+
+/* ปรับ title ให้สวยขึ้น */
+.swal2-title {
+  font-weight: 600 !important;
+  color: #1e3a8a !important;
+}
+
+/* ปรับข้อความด้านใน */
+.swal2-html-container {
+  color: #374151 !important;
+}
+
+/* ✅ ขนาด popup ไม่ใหญ่เกิน */
+.note-popup {
+  padding: 25px !important;
+}
+
+/* ✅ input และ textarea สวยงามพอดี */
+.note-input,
+.note-textarea {
+  width: 100% !important;
+  font-size: 16px !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  border: 1px solid var(--color-border) !important;
+  background: var(--color-card) !important;
+  color: var(--color-text) !important;
+  transition: border-color 0.3s ease;
+}
+
+.note-input:focus,
+.note-textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.3) !important;
+  outline: none !important;
+}
+
+
+.note-textarea {
+  height: 90px !important;
+  max-height: 120px !important;
+  resize: none !important;
+  overflow-y: auto !important;
+}
+
+.swal2-popup {
+  overflow-x: hidden !important;
+}
+
+.swal2-html-container {
+  width: 100% !important;
+  padding: 0 10px !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
+
+.note-input,
+.note-textarea {
+  width: 95% !important; /* ลดจาก 100% นิดนึง */
+  margin: 6px auto !important;
+  display: block;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  padding: 10px 14px !important;
+  border: 1px solid var(--color-border) !important;
+  background: var(--color-card) !important;
+  color: var(--color-text) !important;
+  transition: border-color 0.3s ease;
+}
+
+.note-textarea {
+  height: 90px !important;
+  max-height: 120px !important;
+  resize: none !important;
+  overflow-y: auto !important;
+}
+
+.note-input:focus,
+.note-textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.3) !important;
+  outline: none !important;
+}

@@ -1,0 +1,31 @@
+/* sweetalert.css */
+
+/* เปลี่ยนพื้นหลัง popup */
+.swal2-popup {
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* เปลี่ยนปุ่มยืนยัน */
+.swal2-confirm {
+  background-color: var(--color-primary, #3b82f6) !important;
+  border-radius: 8px !important;
+  padding: 8px 24px !important;
+}
+
+/* ปุ่มยกเลิก */
+.swal2-cancel {
+  background-color: #e5e7eb !important;
+  color: #374151 !important;
+}
+
+/* ปรับ title ให้สวยขึ้น */
+.swal2-title {
+  font-weight: 600 !important;
+  color: #1e3a8a !important;
+}
+
+/* ปรับข้อความด้านใน */
+.swal2-html-container {
+  color: #374151 !important;
+}

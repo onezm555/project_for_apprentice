@@ -13,7 +13,11 @@ app.use(cors());
 
 connectDB();
 app.use(bodyParser.json({limit: '10mb'}));
-readdirSync('./Routes').map((r) => app.use('/api', require(`./Routes/${r}`)));
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+readdirSync('./Routes').map((r) => {
+  const routeName = r.replace('.js', '');
+  app.use(`/api/${routeName}`, require(`./Routes/${r}`));
+});
+
+app.listen(3001, () => {
+  console.log('Server is running on port 3001');
 });

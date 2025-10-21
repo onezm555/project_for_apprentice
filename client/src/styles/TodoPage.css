@@ -1,0 +1,194 @@
+/* 🎯 Layout หลัก */
+.todo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+  transition: background-color 0.5s ease;
+  position: relative;
+}
+
+/* กล่องหลัก */
+.todo-box {
+  background: var(--color-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s ease;
+}
+
+.todo-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+/* ช่องกรอก + ปุ่มเพิ่ม */
+.todo-input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex: 1;
+  background: var(--color-card);
+  color: var(--color-text);
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+  outline: none;
+}
+
+.todo-add-btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-add-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* ปุ่มกรอง */
+.todo-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-filter-btn {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-filter-btn:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.todo-filter-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* รายการ */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.todo-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-label input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.todo-label span.done {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.todo-delete-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.todo-delete-btn:hover {
+  color: #dc2626;
+}
+
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+/* ไม่มีรายการ */
+.todo-empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 20px;
+}
+
+/* ✅ ส่วนหัวของกล่อง */
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* ✅ ปุ่มออกจากระบบ (ใหม่) */
+.logout-btn {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}

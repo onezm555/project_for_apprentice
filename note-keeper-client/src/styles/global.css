@@ -1,0 +1,136 @@
+:root {
+  --color-bg: #ffffff;
+  --color-card: #ffffff;
+  --color-text: #374151;
+  --color-border: #e5e7eb;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; 
+  color: var(--color-secondary, #333);
+}
+#root, .App {
+  min-height: 100vh; 
+  background-color: #ffffff;
+}
+body {
+  display: block !important;
+}
+
+
+.center-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.theme-switch {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px;
+  height: 36px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  z-index: 9999;
+}
+
+.theme-switch .slider {
+  display: flex;
+  align-items: center;
+  width: 120%;
+  transition: transform 0.5s cubic-bezier(0.45, 0, 0.25, 1);
+}
+
+.theme-switch .sun,
+.theme-switch .moon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: opacity 0.4s ease;
+}
+
+.slide-light {
+  transform: translateX(0);
+}
+
+.slide-dark {
+  transform: translateX(-36px);
+}
+
+.theme-switch .sun {
+  color: #facc15; 
+}
+
+.theme-switch .moon {
+  color: #93c5fd; /* ฟ้าอ่อน */
+}
+
+
+.theme-switch:hover {
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  border-color: var(--color-primary);
+}
+
+body, html {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+
+
+.theme-dark {
+  --color-bg: #111827;          /* พื้นหลัง */
+  --color-card: #1f2937;        /* พื้นหลังกล่อง */
+  --color-text: #f3f4f6;        /* สีตัวอักษร */
+  --color-border: #374151;      /* สีขอบ */
+  --color-primary: #60a5fa;     /* ปุ่มหลัก */
+  --color-primary-hover: #93c5fd;
+}
+
+
+.theme-light {
+  --color-bg: #ffffff;
+  --color-card: #ffffff;
+  --color-text: #374151;
+  --color-border: #e5e7eb;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+}
+
+
+html, body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+html, body, #root, .App {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+
+.auth-wrapper,
+.todo-wrapper,
+.main-container {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text);
+  min-height: 100vh;
+}
